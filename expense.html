@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="js/jquery-1.11.1.js"></script>
+    <script src="js/scripts.js"></script>
+    <link type="text/css" rel="stylesheet" href="css/bootstrap.css">
+    <link type="text/css" rel="stylesheet" href="css/styles.css">
+    <title>Expense Organizer</title>
+</head>
+<body>
+  <div class="container">
+    <h1 class="text-left">Expense Organizer</h1>
+    <div class="row"> <!-- top label row -->
+      <div class="col-md-4">
+        <h2>Categories</h2>
+      </div>
+      <div class="col-md-4">
+        <h2>Add Purchase to <span class="selected-category">[x]</span></h2>
+      </div>
+      <div class="col-md-4">
+        <h2><span class="selected-category">[x]</span></h2>
+      </div>
+    </div> <!-- top label row -->
+    <div class="row"> <!-- left -->
+      <div class="col-md-4">
+        <form id="category-form">
+          <div class="form-group">
+            <input id="new-category" type="text" class="form-control" placeholder="New Category">
+          </div> <!-- form group -->
+          <button id="category-add" class="btn btn-primary" type="button">Add</button>
+          <ul id="category-list">
+          </ul>
+        </form>
+      </div> <!-- col-md-4 left -->
+      <div class="col-md-4"> <!-- middle -->
+          <form id="task-form">
+            <div class="form-group">
+              <input id="new-description" class="form-control" type="text" placeholder="What did you buy?"></input>
+              <input id="new-price" class="form-control" type="text" placeholder="How much did each cost?"></input>
+              <input id="new-quantity" class="form-control" type="number" placeholder="How many did you buy?"></input>
+            </div>
+            <button id="purchase-add" class="btn" type="button">Add</button>
+          </form>
+      </div> <!-- col-md-4 middle -->
+      <div class="col-md-4"> <!-- right -->
+          <table id="purchase-table" class="table table-striped">
+            <thead>
+              <tr>
+                <th>Description</th>
+                <th>Price</th>
+                <th>Amount</th>
+                <th>Total</th>
+              </tr>
+            </thead>
+            <tfoot id="purchase-total">
+            </tfoot>
+            <tbody id="purchases" >
+
+            </tbody>
+          </table>
+      </div> <!-- col-md-4 right -->
+    </div> <!-- row -->
+  </div> <!-- container -->
+</body>
+</html>
