@@ -25,9 +25,9 @@
       <div class="col-md-4">
         <form id="category-form">
           <div class="form-group">
-            <input id="new-category" type="text" class="form-control" placeholder="New Category">
+            <input id="new-category" type="text" class="form-control" placeholder="New Category" required>
           </div> <!-- form group -->
-          <button id="category-add" class="btn btn-primary" type="button">Add</button>
+          <button id="category-add" class="btn btn-primary" type="submit">Add</button>
           <ul id="category-list">
           </ul>
         </form>
@@ -35,15 +35,15 @@
       <div class="col-md-4"> <!-- middle -->
           <form id="task-form">
             <div class="form-group">
-              <input id="new-description" class="form-control" type="text" placeholder="What did you buy?"></input>
-              <input id="new-price" class="form-control" type="text" placeholder="How much did each cost?"></input>
-              <input id="new-quantity" class="form-control" type="number" placeholder="How many did you buy?"></input>
+              <input id="new-description" class="form-control" type="text" placeholder="What did you buy?" required></input>
+              <input id="new-price" class="form-control" type="text" placeholder="How much did each cost?" required></input>
+              <input id="new-quantity" class="form-control" type="number" placeholder="How many did you buy?" required></input>
             </div>
             <button id="purchase-add" class="btn" type="button">Add</button>
           </form>
       </div> <!-- col-md-4 middle -->
       <div class="col-md-4"> <!-- right -->
-          <table id="purchase-table" class="table table-striped">
+          <table class="table table-striped">
             <thead>
               <tr>
                 <th>Description</th>
@@ -52,12 +52,14 @@
                 <th>Total</th>
               </tr>
             </thead>
-            <tfoot id="purchase-total">
+            <tfoot>
+              <td></td>
             </tfoot>
-            <tbody id="purchases" >
+            <tbody id="purchase-table" id="purchases" >
 
             </tbody>
           </table>
+          <p id="purchase-total"></p>
       </div> <!-- col-md-4 right -->
     </div> <!-- row -->
   </div> <!-- container -->
